@@ -1,0 +1,344 @@
+@charset "UTF-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Regra para mostrar HTML5 em browsers antigos*/
+address, article, aside, canvas, content, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
+	display: block;
+}
+
+body {
+	background-color: #353535;
+	background-image: url(../images/bkg_empresa.png);
+}
+
+h1, h2, h3 {
+	font-family: Georgia, Times, serif;
+}
+
+content {
+	width: 940px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	position: relative;
+	background-color: #f2f3ed;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+}
+/*--------- Header --------------------- */
+.logo {
+	height: 145px;
+	width: 940px;
+	padding-top: 5px;
+	text-align: center;
+	background-color: #f2f3ed;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+
+}
+
+.nome-sistema {
+	font-family: Georgia, Times, serif;
+	height: 70px;
+	background-color: #00548E;
+}
+
+.nome-sistema h1{
+	padding-top: 15px;
+	text-align: center;
+	color: #f2f3ed;
+	text-shadow: 0px 0px 5px #000;
+	-moz-text-shadow: 0px 0px 5px #000;
+	-o-text-shadow: 0px 0px 5px #000;
+	-webkit-text-shadow: 0px 0px 5px #000;
+
+}
+
+/*--------- Menu --------------------- */
+nav {
+	float: left;
+	width: 200px;
+}
+
+nav li {
+	list-style-type: none;
+}
+
+nav li a{
+	font-family: Georgia, Times, serif;
+	text-decoration: none;
+	display: block;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	font-size: 18px;
+}
+
+nav li a:link{
+	color: #333;
+}
+
+nav li a:visited{
+	color: #333;
+}
+
+nav li a:hover{
+	font-family: Georgia, Times, serif;
+	color: #FFF;
+	background-color: #00548E;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+}
+
+nav li a:active{
+	color: #333;
+	background-color: #666;
+}
+/*--------- Article --------------------- */
+article {
+	float: right;
+	width: 739px;
+	background-color: #f2f3ed;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+
+}
+
+.cabecalho {
+	clear: both;
+	width: 739px;
+	height: 60px;
+	background-color: #939598;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+}
+
+.cabecalho h2 {
+	float: left;
+	color: #f2f3ed;
+	border: 2px black;
+	margin-top: 16px;
+	margin-left: 20px;
+
+	text-shadow: 0px 0px 5px #000;
+	-moz-text-shadow: 0px 0px 5px #000;
+	-o-text-shadow: 0px 0px 5px #000;
+	-webkit-text-shadow: 0px 0px 5px #000;
+	
+}
+
+#add-membro {
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin-top: 5px;
+	margin-right: 20px;
+	border: 2px outset #ccc;
+	background-color: #f2f3ed;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#add-membro:hover {
+	box-shadow: 0px 0px 10px #000000;
+	-webkit-box-shadow: 0px 0px 10px #000000;
+}
+#add-membro:active {
+	border: 2px inset #ccc;
+	background-color: #3cb371;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+}
+
+ /*--------- Formulario ------------------*/
+.form-area {
+	
+	margin: 10px;
+	display: none;
+	background-color: #939598;
+	box-shadow: 0px 0px 10px #888;
+	-webkit-box-shadow: 0px 0px 10px #888;
+}
+
+#form-add-membro {
+	font-family: Georgia, Times, serif;
+	padding-top: 10px;
+	
+}
+.form-container {
+	margin-top: 5px;
+	height: 30px;
+}
+
+.form-container label{
+	float: left;
+	color: #f2f3ed;
+	text-shadow: 0px 0px 5px #000;
+	-moz-text-shadow: 0px 0px 5px #000;
+	-o-text-shadow: 0px 0px 5px #000;
+	-webkit-text-shadow: 0px 0px 5px #000;
+}
+
+#form-add-membro input {
+	height: 25px;
+	outline: none;
+	color: #00548E;
+	background-color: #f2f3ed;
+	border: 0;
+
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.lbl1, .lbl2 {
+	text-align: center;
+	width: 120px;
+	font-size: 20px;
+}
+
+#nomeMembro, #cargo {
+	width: 500px;
+	color: #00548E;
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+}
+
+#form-add-membro #ok-membro {
+	width: 60px;
+	height: 25px;
+	margin-top: 10px;
+	margin-left: 270px;
+	margin-bottom: 10px;
+	color: #00548E;
+	font-weight: bold;
+	background-color: #f2f3ed;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#form-add-membro #ok-membro:hover {
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+}
+
+#form-add-membro #ok-membro:active {
+	background-color: #3cb371;
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+}
+
+/*--------- Fim Formulario --------------*/
+
+#container {
+	padding: 15px 15px 25px 15px;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+}
+
+.membro {
+	width: 500px;
+
+	background-color: #00548E;
+	margin-bottom: 15px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+}
+
+.membro p {
+	font-family: Georgia, Times, serif;
+	font-size: 22px;
+	color: #f2f3ed;
+	margin-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	text-shadow: 0px 0px 5px #000;
+	-moz-text-shadow: 0px 0px 5px #000;
+	-o-text-shadow: 0px 0px 5px #000;
+	-webkit-text-shadow: 0px 0px 5px #000;
+}
+
+.areaVazia {
+	font-family: Georgia, Times, serif;
+	text-align: center;
+	padding-top: 5px;
+	margin-top: 10px;
+	width: 700px;
+	height: 30px;
+	font-size: 22px;
+	color: #f2f3ed;
+	background-color: #00548E;
+	outline: none;
+
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: inset 0px 0px 5px #888;
+	-webkit-box-shadow: inset 0px 0px 5px #888;	
+}
+
+/*--------- Footer --------------------- */
+footer {	
+	clear: both;
+	background-color: #00548E;
+
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	-moz-border-bottom-right-radius: 25px;
+	-moz-border-bottom-left-radius: 25px;
+}
+
+footer section.copy {
+	float: left;
+	width: 200px;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+footer section.copy p {
+	color: #f2f3ed;
+}
+
+footer section {
+	float: left;
+	width: 246px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	color: #96C;
+}
+
+footer section h3 {
+	font-family: Georgia, Times, serif;
+	color: #f2f3ed;
+	font-size: 16px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #f2f3ed;
+	padding-bottom: 0px;
+	text-transform: capitalize;
+	font-weight: normal;
+
+}
+
+footer section p {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 5px;
+	color: black;
+	font-size: 13px;
+	line-height: 18px;
+	
+}
+
+.clearing {
+	clear: both;
+}

@@ -1,0 +1,529 @@
+@charset "UTF-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Regra para mostrar HTML5 em browsers antigos*/
+address, article, aside, canvas, content, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
+	display: block;
+}
+
+body {
+	background-color: #353535;
+	background-image: url(../images/bkg_empresa.png);
+}
+
+h1, h2, h3 {
+	font-family: Georgia, Times, serif;
+}
+
+content {
+	width: 940px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	position: relative;
+	background-color: #f2f3ed;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+}
+
+/*--------- Header --------------------- */
+.logo {
+	height: 145px;
+	width: 940px;
+	padding-top: 5px;
+	text-align: center;
+	background-color: #f2f3ed;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+
+}
+
+.nome-sistema {
+	font-family: Georgia, Times, serif;
+	height: 70px;
+	background-color: #00548E;
+}
+
+.nome-sistema h1{
+	padding-top: 15px;
+	text-align: center;
+	color: #f2f3ed;
+	text-shadow: 0px 0px 5px #000;
+	-moz-text-shadow: 0px 0px 5px #000;
+	-o-text-shadow: 0px 0px 5px #000;
+	-webkit-text-shadow: 0px 0px 5px #000;
+
+}
+
+/*--------- Article --------------------- */
+article {
+	float: right;
+	width: 940px;
+	background-color: #f2f3ed;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+
+}
+
+#cabecalho {
+	clear: both;
+	width: 940px;
+	height: 60px;
+	background-color: #939598;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+}
+
+#cabecalho h2 {
+	float: left;
+	color: #f2f3ed;
+	border: 2px black;
+	margin-top: 16px;
+	margin-left: 50px;
+
+	text-shadow: 0px 0px 5px #000;
+	-moz-text-shadow: 0px 0px 5px #000;
+	-o-text-shadow: 0px 0px 5px #000;
+	-webkit-text-shadow: 0px 0px 5px #000;
+}
+
+#return {
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin-top: 5px;
+	margin-right: 20px;
+	border: 2px outset #ccc;
+	background-color: #f2f3ed;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#return:hover {
+	box-shadow: 0px 0px 10px #000000;
+	-webkit-box-shadow: 0px 0px 10px #000000;
+}
+#return:active {
+	border: 2px inset #ccc;
+	background-color: #3cb371;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+}
+
+#add-acao {
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin-top: 5px;
+	margin-right: 20px;
+	border: 2px outset #ccc;
+	background-color: #f2f3ed;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#add-acao:hover {
+	box-shadow: 0px 0px 10px #000000;
+	-webkit-box-shadow: 0px 0px 10px #000000;
+}
+#add-acao:active {
+	border: 2px inset #ccc;
+	background-color: #3cb371;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+}
+
+
+ /*--------- Formulario ------------------*/
+.form-area {
+	
+	width: 650px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 100px;
+	display: none;
+	background-color: #939598;
+	box-shadow: 0px 0px 10px #888;
+	-webkit-box-shadow: 0px 0px 10px #888;
+}
+
+#form-add-acao {
+	font-family: Georgia, Times, serif;
+	padding-top: 10px;
+	margin-left: 15px;
+	
+}
+.form-container {
+	margin-top: 10px;
+	height: 30px;
+}
+
+.form-container label{
+	float: left;
+	color: #f2f3ed;
+	text-shadow: 0px 0px 5px #000;
+	-moz-text-shadow: 0px 0px 5px #000;
+	-o-text-shadow: 0px 0px 5px #000;
+	-webkit-text-shadow: 0px 0px 5px #000;
+}
+
+.form-area p {
+	font-size: 20px;
+	font-weight: bold;
+	color: #00548E;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-shadow: 0px 0px 10px #888;
+	-moz-text-shadow: 0px 0px 10px #888;
+	-o-text-shadow: 0px 0px 10px #888;
+	-webkit-text-shadow: 0px 0px 10px #888;
+}
+
+#form-add-acao input {
+	height: 25px;
+	outline: none;
+	color: #00548E;
+	background-color: #f2f3ed;
+	border: 0;
+
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.lbl1, .lbl2 {
+	text-align: center;
+	width: 120px;
+	font-size: 20px;
+}
+
+.lbl2 {
+	margin-top: 13px;
+	font-size: 20px;
+}
+
+#nomeAcao, #desc {
+	width: 500px;
+	color: #00548E;
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+}
+
+#descricao {
+	height: 75px;
+}
+
+#desc {
+	outline: none;
+	resize: none;
+	color: #00548E;
+	background-color: #f2f3ed;
+	border: 0;
+
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.custo1 {
+	margin-top: 20px;
+}
+
+.lbl3, .lbl4  {
+	width: 155px;
+	font-size: 20px;
+}
+
+.lbl4 {
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+#custoP, #custoR {
+	width: 100px;
+	float: left;
+	color: #00548E;
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+}
+
+#memRes {
+	height: 50px;
+}
+
+.lbl5 {
+
+	width: 120px;
+	font-size: 20px;
+	float: left;
+}
+
+#membro {
+	color: #00548E;
+	margin-top: 20px;
+	width: 500px;
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+}
+
+.form-status {
+	margin-top: 10px;
+	height: 150px;
+}
+
+.lbl6 {
+	width: 76px;
+	float: left;
+	font-size: 20px;
+	color: #f2f3ed;
+	text-shadow: 0px 0px 5px #000;
+	-moz-text-shadow: 0px 0px 5px #000;
+	-o-text-shadow: 0px 0px 5px #000;
+	-webkit-text-shadow: 0px 0px 5px #000;
+}
+
+.form-status div {
+	margin-top: 5px;
+	margin-left: 75px;
+	margin-right: 5px;
+	width: 200px;
+	height: 25px;
+
+	background-color: #f2f3ed;
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.form-status .lbl7 {
+	font-family: Georgia, Times, serif;
+	margin-left: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #00548E;
+	vertical-align: middle;
+}
+
+.status {
+	float: left;
+	margin-left: 5px;
+	box-shadow: 0px 0px 0px #000;
+	-webkit-box-shadow: 0px 0px 0px #000;
+	margin-top: 0;
+	
+}
+
+.form-5w2h {
+	margin-top: 10px;
+}
+
+.form-5w2h label {
+	width: 76px;
+	float: left;
+	font-size: 20px;
+	color: #f2f3ed;
+	text-shadow: 0px 0px 5px #000;
+	-moz-text-shadow: 0px 0px 5px #000;
+	-o-text-shadow: 0px 0px 5px #000;
+	-webkit-text-shadow: 0px 0px 5px #000;
+}
+
+.form-5w2h textarea {
+	width: 500px;
+	outline: none;
+	resize: none;
+	color: #00548E;
+	background-color: #f2f3ed;
+	border: 0;
+
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+
+/* botao formulario*/
+#form-add-acao #ok-acao {
+	width: 120px;
+	height: 45px;
+	margin-left: 270px;
+	margin-bottom: 10px;
+	color: #00548E;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #f2f3ed;
+	
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#form-add-acao #ok-acao:hover {
+	box-shadow: 0px 0px 10px #000;
+	-webkit-box-shadow: 0px 0px 10px #000;
+}
+
+#form-add-acao #ok-acao:active {
+	background-color: #3cb371;
+	box-shadow: 0px 0px 10px #000;
+	-webkit-box-shadow: 0px 0px 10px #000;
+}
+
+/*  Container */
+#container {
+	padding: 15px 15px 25px 15px;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888;
+}
+
+.areaVazia {
+	font-family: Georgia, Times, serif;
+	text-align: center;
+	padding-top: 5px;
+	margin-top: 10px;
+	margin-left: 100px;
+	width: 700px;
+	height: 30px;
+	font-size: 22px;
+	color: #f2f3ed;
+	background-color: #00548E;
+	outline: none;
+
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: inset 0px 0px 5px #888;
+	-webkit-box-shadow: inset 0px 0px 5px #888;	
+}
+
+.submit-button {
+	width: 700px;
+	height: 50px;
+	font-size: 22px;
+	color: #f2f3ed;
+	background-color: #00548E;
+	outline: none;
+
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	
+	box-shadow: inset 0px 0px 5px #888;
+	-webkit-box-shadow: inset 0px 0px 5px #888;
+	
+}
+
+.submit-button:hover {
+	box-shadow: 0px 0px 10px #888;
+	-webkit-box-shadow: 0px 0px 10px #888;
+}
+
+.geral {
+	width: 700px;
+	margin-top: 10px;
+	margin-left: 100px;
+}
+
+.camposAcao {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: -1px;
+	width: 700px;
+	font-size: 22px;
+	color: #f2f3ed;
+	background-color: #939598;
+	outline: none;
+
+	transition: all 1s linear;
+
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	
+	box-shadow: inset 0px 0px 10px #000;
+	-webkit-box-shadow: inset 0px 0px 10px #000;
+}
+
+.camposAcao p {
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.camposAcao .plane {
+	margin-top: 5px;
+	font-size: 24px;
+	text-decoration: underline;
+	color: #00548E;
+	text-shadow: 0px 0px 5px #888;
+	-moz-text-shadow: 0px 0px 5px #888;
+	-o-text-shadow: 0px 0px 5px #888;
+	-webkit-text-shadow: 0px 0px 5px #888;
+}
+
+/*--------- Fim Formulario --------------*/
+
+/*--------- Footer --------------------- */
+footer {	
+	clear: both;
+	background-color: #00548E;
+
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	-moz-border-bottom-right-radius: 25px;
+	-moz-border-bottom-left-radius: 25px;
+}
+
+footer section.copy {
+	float: left;
+	width: 200px;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+footer section.copy p {
+	color: #f2f3ed;
+}
+
+footer section {
+	float: left;
+	width: 246px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	color: #96C;
+}
+
+footer section h3 {
+	font-family: Georgia, Times, serif;
+	color: #f2f3ed;
+	font-size: 16px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #f2f3ed;
+	padding-bottom: 0px;
+	text-transform: capitalize;
+	font-weight: normal;
+
+}
+
+footer section p {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 5px;
+	color: black;
+	font-size: 13px;
+	line-height: 18px;
+	
+}
+
+.clearing {
+	clear: both;
+}
