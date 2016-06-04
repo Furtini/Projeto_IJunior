@@ -69,7 +69,7 @@ article {
 
 }
 
-#cabecalho {
+#cabecalho-area {
 	clear: both;
 	width: 940px;
 	height: 60px;
@@ -78,7 +78,7 @@ article {
 	-webkit-box-shadow: 0px 0px 5px #888;
 }
 
-#cabecalho h2 {
+#cabecalho-area h2 {
 	float: left;
 	color: #f2f3ed;
 	border: 2px black;
@@ -427,6 +427,7 @@ article {
 	width: 700px;
 	margin-top: 10px;
 	margin-left: 100px;
+	margin-bottom: 10px;
 }
 
 .camposAcao {

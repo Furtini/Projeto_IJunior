@@ -1,131 +1,60 @@
-// Vetor de membros.
-var membros = [];
-
 // Vetor de áreas.
 var areas = ["Diretoria de Recursos Humanos"];
 
-var atividades = ["Atividade 1", "Atividade 2", "Atividade 3"];
-
-//vetor de ações estrategicas.
-var acoesEstrategicas = [];
-
-// Construtor de uma ação estrategica
-function AcaoEstrategica (nome, desc, cp, cr, mr, status, ativ, 
-							what, how, where, when, why, who, howMuch) {
-
-	this.nome = nome;
-	this.desc = desc;
-	this.cp = cp;
-	this.cr = cr;
-	this.mr = mr;
-	this.status = status;
-	this.ativ = ativ;
-	this.what = what;
-	this.how = how;
-	this.where = where;
-	this.when = when;
-	this.why = why;
-	this.who = who;
-	this.howMuch = howMuch;
-}
-
 document.onload = imprimeCabecalho();
-document.onload = imprimiAcao();
 
+// Envia formularioda Area para banco sem atualizar a pagina.
+$(document).ready(function() {
+	$("#ok-acao").click(function(){
 
-// Adiciona ação.
-function adicionaAcao() {
+		var acao   = $("#nomeAcao").val();
+		var desc   = $("#desc").val();
+		var mr     = $("#membroR").val();
+		var cp	   = $("#custoP").val();
+		var cr 	   = $("#custoR").val();
+		var rstatus = $("input[name=Status_acao]:checked" , "#form_status").val();
+		var what   = $("#what").val();
+		var how    = $("#how").val();
+		var where  = $("#where").val();
+		var when   = $("#when").val();
+		var why    = $("#why").val();
+		var who    = $("#who").val();
+		var howM   = $("#howMuch").val();
 
-	getAcao();
-	imprimiAcao();
-
-	// Limpa formulario
-	$("#form-add-acao").trigger("reset");
-
-	esconde();
-}
-
-// Busca nome da nova ação estrategica adicionada.
-function getAcao() {
-
-	//nome, desc, cp, cr, mr, status, ativ, 
-	//what, how, where, when, why, who, howMuch)
-	var nome = $("#nomeAcao").val();
-	var desc = $("#desc").val();
-	var cp = $("#custoP").val();
-	var cr = $("#custoR").val();
-	var mr = $("#membro").val();
-	var status = $("input[name=Status]:checked" , "#form-status").val();
-	var ativ = 0;
-	var what = $("#what").val();
-	var how = $("#how").val();
-	var where = $("#where").val();
-	var when = $("#when").val();
-	var why = $("#why").val();
-	var who = $("#who").val();
-	var howMuch = $("#howMuch").val();
-	
-	var acao = new AcaoEstrategica(nome, desc, cp, cr, mr, status, ativ, 
-									what, how, where, when, why, who, howMuch);
-	
-	acoesEstrategicas.push(acao);
-	
-}
-
-// Imprime açao na area reservada
-function imprimiAcao() {
-
-	if (acoesEstrategicas.length == 0) {
-		var a = '<div class="areaVazia">' + "Nenhuma ação cadastrada" + '</div>';
-	   
-	    document.getElementById('container').innerHTML = a;
-
-	} else {
-		limpaArea();
-		
-		for (var i = 0; i < acoesEstrategicas.length; i++) {
-			var a = '<div class="geral">'
-		    	  + '<button id="botao' + (i+1) + '" class="submit-button">' + acoesEstrategicas[i].nome + '</button>'
-		    	  + '<div class="camposAcao" id="camposAcao">'
-		    	  	+ '<div>'
-		    	  		+ '<p>' + "Descrição: " + acoesEstrategicas[i].desc + '</p>'
-		    	  		+ '<p>' + "Custo Planejado: " + acoesEstrategicas[i].cp + '</p>'
-		    	  		+ '<p>' + "Custo Realizado: " + acoesEstrategicas[i].cr + '</p>'
-		    	  		+ '<p>' + "Membro Responsável: " + acoesEstrategicas[i].mr + '</p>'
-		    	  		+ '<p>' + "Status: " + acoesEstrategicas[i].status + '</p>'
-		    	  		+ '<p>' + "Atividades: " + acoesEstrategicas[i].ativ + '</p>'
-		    	  		+ '<p class="plane">' + "Planejamento 5W2H" + '</p>'
-		    	  		+ '<p>' + "What: " + acoesEstrategicas[i].what + '</p>'
-		    	  		+ '<p>' + "How: " + acoesEstrategicas[i].how + '</p>'
-		    	  		+ '<p>' + "Where: " + acoesEstrategicas[i].where + '</p>'
-		    	  		+ '<p>' + "When: " + acoesEstrategicas[i].when + '</p>'
-		    	  		+ '<p>' + "Why: " + acoesEstrategicas[i].why + '</p>'
-		    	  		+ '<p>' + "Who: " + acoesEstrategicas[i].who + '</p>'
-		    	  		+ '<p>' + "How much: " + acoesEstrategicas[i].howMuch + '</p>'
-		    	  	+ '</div>'
-		    	+ '</div>';
-			document.getElementById('container').innerHTML += a;
-
-			// Seta botão para mudar de página.
-			for (var i = 0; i < areas.length; i++) {
-				document.getElementById("botao"+(i+1)).onclick = function () {
-					location.href = "../html/atividades.html";
-					};
+		$.ajax({
+			type: 'POST',
+			url: '../php/enviandoAcao.php',
+			data: { nomeAcao : acao,
+				    desc : desc,
+				    membroR : mr,
+				    custoP : cp,
+				    custoR : cr,
+				    form_status : rstatus,
+				    what : what,
+				    how : how,
+				    where : where,
+				    when : when,
+				    why : why,
+				    who : who,
+				    howMuch : howM
+					},
+			success: function (event) {
+				$('#form-add-acao').trigger("reset");
 			}
-		}
-	}
-}
+		});
+	});
+});
 
-// Limpa area para impressão 
-function limpaArea() {
-	// Remove div para lista vazia.
-		$(".areaVazia").remove();
-		// Remove listas já adicionadas.
-		for (var i = 0; i < atividades.length; i++) {
-			$(".geral").remove();
-			$(".submit-button").remove();
-			$(".camposAcao").remove();
-		}
+// Buscando Areas incluidas no banco.
+$(document).ready(function() {
+	setInterval(function() {
+		$('#container-acao').load('../php/buscandoAcao.php')
+	}, 500);
+});
+
+// Busca pagina de ações estrategicas.
+function buscaPagAcao() {
+	document.location.href = "../html/atividades.html";
 }
 
 // Mostra e esconde formularios.
@@ -179,5 +108,5 @@ function hide(elementos) {
 function imprimeCabecalho() {
 
 	var area = '<h2>' + "Área: " + areas[0]  + '</h2>';
-	document.getElementById('cabecalho').innerHTML += area;
+	document.getElementById('cabecalho-area').innerHTML += area;
 }

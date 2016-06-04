@@ -1,25 +1,7 @@
-// Envia formularioda Area para banco sem atualizar a pagina.
-$(document).ready(function() {
-	$("#ok-membro").click(function(){
-
-		var nomemembro = $("#nomeMembro").val();
-		var cargo = $("#cargo").val();
-
-		$.ajax({
-			type: 'POST',
-			url: '../php/enviandoMembro.php',
-			data: {nomeMembro : nomemembro, cargo : cargo},
-			success: function (status) {
-				$('#form-add-membro').trigger("reset");
-			}
-		});
-	});
-});
-
-// Buscando Areas incluidas no banco.
+// Buscando objetivos no banco.
 $(document).ready(function() {
 	setInterval(function() {
-		$('#container-membro').load('../php/buscandoMembro.php')
+		$('#container-objetivo').load('../php/buscandoObjetivo.php')
 	}, 500);
 });
 

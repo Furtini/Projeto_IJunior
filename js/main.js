@@ -1,8 +1,3 @@
-// Vetor de membros.
-var membros = ["Carinha 1", "Carinha 2", "Carinha 3"];
-
-// Vetor de áreas.
-var areas = [];
 
 // Desabilitando enter do form
 $(document).keypress(function(event) {
@@ -21,7 +16,7 @@ $(document).ready(function() {
 			url: '../php/enviandoArea.php',
 			data: {area : formData},
 			success: function (status) {
-				$('#area').val('');
+				$('#form-add-area').trigger("reset");
 			}
 		});
 	});
@@ -35,15 +30,9 @@ $(document).ready(function() {
 });
 
 // Busca pagina de ações estrategicas.
-function buscaPag() {
+function buscaPagArea() {
 	document.location.href = "../html/area.html";
 }
-
-
-
-
-
-
 
 // Mostra e esconde formularios.
 // Chama show.

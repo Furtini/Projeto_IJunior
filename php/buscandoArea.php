@@ -10,7 +10,11 @@
 	 	
 	while($row = mysqli_fetch_array($result)) {
 
-		echo '<button id="botao' .$row['areas_ID']. '" class="submit-button" onclick="buscaPag();" >' .$row['areas_nome']. '</button>'; 
+		echo '<button id="botao' .$row['areas_ID']. '" class="submit-button" onclick="buscaPagArea();" >' .$row['areas_nome']. '</button>'; 
 	}
+
+	
+
+	mysqli_close($conn);
 	
  ?>
