@@ -109,7 +109,7 @@ function imprimiAcao() {
 			// Seta botão para mudar de página.
 			for (var i = 0; i < areas.length; i++) {
 				document.getElementById("botao"+(i+1)).onclick = function () {
-					location.href = "../php/atividades.php";
+					location.href = "../html/atividades.html";
 					};
 			}
 		}

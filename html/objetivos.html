@@ -4,15 +4,14 @@
 	<title>Projeto Final</title>
 	<meta charset="utf-8">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/styleMain.css">
 </head>
 <body>
 	<content>
 		
 		<header>
 			<div class="logo">
-				<a href="http://ijunior.com.br" target="_blank"><img src="images/logo.png"></a>
+				<a href="http://ijunior.com.br" target="_blank"><img src="../images/logo.png"></a>
 			</div>
 
 			<div class="nome-sistema">
@@ -20,24 +19,23 @@
 			</div>
 		</header>
 
-		<!-- Seção de loguin-->
+		<nav>
+			<ul>
+				<li><a href="main.html">Áreas</a></li>
+				<li><a href="membros.html">Membros</a></li>
+				<li><a href="objetivos.html">Objetivos Estratégicos</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+			</ul>
+		</nav>
+
 		<article>
-			<div class="login">
-				<div class="sub">
-					<h3>Login</h3>
-				</div>
-				<form class="form-login" name="form" onsubmit="" method="POST" action="php/main.php">
-					<div class="block">
-						<input type="text" name="usuario" id="usuario" placeholder="E-mail" required>
-						<input type="password" name="password" id="password" placeholder="Password" required>
-						<button type="submit" id="submit" name="submit" onclick="">Login</button>
-						<button type="submit" id="register" name="register" onclick="">Register</button>
-					</div>
-				</form>
-				<div id="option"> 
-					<a href="#">Forgot password?</a>
-				</div>			
-			</div>	
+			<div class="cabecalho">
+				<h2>Objetivos Estratégicos:</h2>
+			</div>
+
+			<div id="container">
+				
+			</div>
 		</article>
 
 		<footer>

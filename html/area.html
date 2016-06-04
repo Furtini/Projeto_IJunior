@@ -10,7 +10,15 @@
 <body>
 	<content>
 		
-		<?php include('header.php'); ?>
+		<header>
+			<div class="logo">
+				<a href="http://ijunior.com.br" target="_blank"><img src="../images/logo.png"></a>
+			</div>
+
+			<div class="nome-sistema">
+				<h1>SAE: Sistema de Ações Estratégicas</h1>
+			</div>
+		</header>
 
 		<article>
 			<div id="cabecalho">
@@ -30,15 +38,15 @@
 				<form id="form-add-acao" name="form-add-acao" method="POST" ">
 					<div class="form-container">
 						<label class="lbl1">Nome: </label>
-						<input type="text" id="nomeAcao" name="nome">
+						<input type="text" id="nomeAcao" name="nome" maxlength="100">
 						</div>
 					<div class="form-container" id="descricao">
 						<label class="lbl2">Descrição: </label>
-						<textarea id="desc" name="desc" rows="5"></textarea>
+						<textarea id="desc" name="desc" rows="5" maxlength="300"></textarea>
 						</div>
 					<div class="form-container" id="memRes">
 						<label class="lbl5">Membro Responsável: </label>
-						<input type="text" id="membro" name="membro">
+						<input type="text" id="membro" name="membro" maxlength="100">
 						</div>
 					<div class="form-container" id="custo1">
 						<label class="lbl3">Custo Planejado: </label>
@@ -72,44 +80,74 @@
 					<p>Planejamento 5W2H:</p>
 					<div class="form-5w2h">
 						<label>What? </label>
-						<textarea rows="5" id="what"></textarea>
+						<textarea rows="5" id="what" maxlength="300"></textarea>
 						</div>
 					<div class="form-5w2h">
 						<label>How? </label>
-						<textarea rows="5" id="how"></textarea>
+						<textarea rows="5" id="how" maxlength="300"></textarea>
 						</div>
 					<div class="form-5w2h">
 						<label>Where? </label>
-						<textarea rows="5" id="where"></textarea>
+						<textarea rows="5" id="where" maxlength="300"></textarea>
 						</div>
 					<div class="form-5w2h">
 						<label>When? </label>
-						<textarea rows="5" id="when" na></textarea>
+						<textarea rows="5" id="when" maxlength="300"></textarea>
 						</div>
 					<div class="form-5w2h">
 						<label>Why? </label>
-						<textarea rows="5" id="why"></textarea>
+						<textarea rows="5" id="why" maxlength="300"></textarea>
 						</div>
 					<div class="form-5w2h">
 						<label>Who? </label>
-						<textarea rows="5" id="who"></textarea>
+						<textarea rows="5" id="who" maxlength="300"></textarea>
 						</div>
 					<div class="form-5w2h">
 						<label>How Much? </label>
-						<textarea rows="5" id="howMuch"></textarea>
+						<textarea rows="5" id="howMuch" maxlength="300"></textarea>
 						</div>
 					<br>
 					<button type="button" id="ok-acao" name="ok-acao" onclick="adicionaAcao();">Done</button>
 				</form>
 			</div>
 
-			<div id="container">
+			<div id="container-area">
 				
 
 			</div>
 		</article>
 
-		<?php include('footer.php'); ?>
+		<footer>
+			<section class="copy">
+				<p>&copy;2016 Equipe Foda Essa Hein!</p>
+			</section>
+
+			<section>
+				<h3>Lucas Furtini Veado</h3>
+				<p> Universidade Federal de Minas Gerais</p>
+				<p>	Departamento de Ciência da Computação</p>
+				<p>	Matricula: 2013007609</p>
+				<p>	Email: lfurtini@gmail.com</p>
+				</section>
+			
+			<section>
+				<h3>Felipe Marcelino</h3>
+				<p> Universidade Federal de Minas Gerais</p>
+				<p>	Departamento de Ciência da Computação</p>
+				<p>	Matricula: 2013007315</p>
+				<p>	Email: felipe.marcelina19@gmail.com</p>
+				</section>
+
+			<section>
+				<h3> Jonas Rafael </h3>
+				<p> Universidade Federal de Minas Gerais</p>
+				<p>	Departamento de Ciência da Computação</p>
+				<p>	Matricula: 2015055929</p>
+				<p>	Email: jonasrafael97@hotmail.com</p>
+				</section>
+
+			<br class="clearing">
+		</footer>
 
 	</content>
 

@@ -2,7 +2,7 @@
 var membros = ["Carinha 1", "Carinha 2", "Carinha 3"];
 
 // Vetor de áreas.
-var areas = ["Diretoria de Recursos Humanos", "Area 2", "Area 3"];
+var areas = [];
 
 // Desabilitando enter do form
 $(document).keypress(function(event) {
@@ -11,65 +11,39 @@ $(document).keypress(function(event) {
 	}
 });
 
-document.onload = imprimeAreas();
+// Envia formularioda Area para banco sem atualizar a pagina.
+$(document).ready(function() {
+	$("#ok-area").click(function(){
 
-// Adiciona area.
-function adicionaArea() {
-	
-	getArea();
-	imprimeAreas();
-	esconde();
+		var formData = $("#area").val();	
+		$.ajax({
+			type: 'POST',
+			url: '../php/enviandoArea.php',
+			data: {area : formData},
+			success: function (status) {
+				$('#area').val('');
+			}
+		});
+	});
+});
+
+// Buscando Areas incluidas no banco.
+$(document).ready(function() {
+	setInterval(function() {
+		$('#container-area').load('../php/buscandoArea.php')
+	}, 500);
+});
+
+// Busca pagina de ações estrategicas.
+function buscaPag() {
+	document.location.href = "../html/area.html";
 }
 
-// Buscando input da nova área adivionada.
-function getArea() {
-	
-	var area = document.getElementById("area").value;
 
-	if (area === "") {
-		alert("Campo Vazio!");
-		return false;
-	} else {
-		areas.push(area);
-		
-		window.localStorage.setItem("areas", areas);
 
-		document.getElementById("area").value = "";
-		return true;
-	}
-}
 
-// Imprime áreas na pagina.
-function imprimeAreas() {
 
-	if (areas.length == 0) {
-		var a = '<div class="areaVazia">' + "Nenhuma área cadastrada" + '</div>';
-	   
-	    document.getElementById('container').innerHTML = a;
 
-	} else {
-		// Remove div para lista vazia.
-		$(".areaVazia").remove();
-		// Remove listas já adicionadas.
-		for (var i = 0; i < areas.length; i++) {
-			$(".submit-button").remove();
-		}
-
-		// Imprime lista completa.
-		for (var i = 0; i < areas.length; i++) {
-		    var a = '<button id="botao' + (i+1) + '" class="submit-button">' + areas[i] + '</button>';
-
-		    document.getElementById('container').innerHTML += a;
-		}
-
-		// Seta botão para mudar de página.
-		for (var i = 0; i < areas.length; i++) {
-			document.getElementById("botao"+(i+1)).onclick = function () {
-				location.href = "../php/area.php";
-				};
-		}
-	}
-}
 
 // Mostra e esconde formularios.
 // Chama show.
